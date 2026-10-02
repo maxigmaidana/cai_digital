@@ -200,10 +200,7 @@ class ProfileCardWidget extends StatelessWidget {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(35),
-                      child: Image.network(
-                        'https://imgs.search.brave.com/Es55_5wAvAOQmyk6QZHLa9svOfl6EChttJPsYJcHN4Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vZ1Zvd1kv/TUFHY3VoZ1Zvd1kv/MS90bC9jYW52YS1w/ZXJmaWwtZGUtdW5h/LW11amVyLWpvdmVu/LXNvbnJpZW5kby1h/bC1haXJlLWxpYnJl/LU1BR2N1aGdWb3dZ/LmpwZw',
-                        fit: BoxFit.cover,
-                      ),
+                      child: Image.asset('assets/image.png', fit: BoxFit.cover),
                     ),
                   ),
                   Positioned(
@@ -241,7 +238,7 @@ class ProfileCardWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'Ayelen Pérez',
+                      'Joan Fernandez',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,

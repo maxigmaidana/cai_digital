@@ -84,9 +84,7 @@ class _CustomAppBar extends StatelessWidget {
         const CircleAvatar(
           radius: 20,
           backgroundColor: Colors.grey,
-          backgroundImage: NetworkImage(
-            'https://imgs.search.brave.com/Es55_5wAvAOQmyk6QZHLa9svOfl6EChttJPsYJcHN4Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXJr/ZXRwbGFjZS5jYW52/YS5jb20vZ1Zvd1kv/TUFHY3VoZ1Zvd1kv/MS90bC9jYW52YS1w/ZXJmaWwtZGUtdW5h/LW11amVyLWpvdmVu/LXNvbnJpZW5kby1h/bC1haXJlLWxpYnJl/LU1BR2N1aGdWb3dZ/LmpwZw',
-          ), // Replace with actual profile picture
+          backgroundImage: AssetImage('assets/image.png'),
         ),
         const SizedBox(width: 12),
         const Column(
@@ -97,7 +95,7 @@ class _CustomAppBar extends StatelessWidget {
               style: TextStyle(fontSize: 12, color: Colors.grey),
             ),
             Text(
-              'Ayelen Pérez',
+              'Joan Fernandez',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ],
@@ -135,7 +133,8 @@ class _MembershipCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push('/carnet-info'); // Navigate to the QR screen
+        GoRouter.of(context)
+            .push('/home/carnet-info'); // Navigate to the QR screen
       },
       child: Column(
         children: [
@@ -212,7 +211,7 @@ class _MembershipCard extends StatelessWidget {
                         style: TextStyle(fontSize: 10, color: Colors.white70),
                       ),
                       Text(
-                        'Ayelen Pérez',
+                        'Joan Fernandez',
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
@@ -343,19 +342,31 @@ class _QuickAccessGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final itemsfirstLine = [
-      {'icon': Icons.group, 'label': 'Peñas', 'route': '/groups'},
+      {'icon': Icons.group, 'label': 'Peñas', 'route': '/home/groups'},
       {
         'icon': Icons.view_compact,
         'label': 'Entradas',
-        'route': '/proximo-partido',
+        'route': '/home/proximo-partido',
       },
-      {'icon': Icons.feed, 'label': 'Cuota\nSocial', 'route': '/social-cuote'},
+      {
+        'icon': Icons.feed,
+        'label': 'Cuota\nSocial',
+        'route': '/home/social-cuote',
+      },
     ];
 
     final itemsSecondLine = [
-      {'icon': Icons.card_giftcard, 'label': 'Tienda', 'route': '/tienda-roja'},
-      {'icon': Icons.sports_soccer, 'label': 'Fútbol', 'route': '/detail/5'},
-      {'icon': Icons.person, 'label': 'Rey de\nCopas', 'route': '/user-info'},
+      {
+        'icon': Icons.card_giftcard,
+        'label': 'Tienda',
+        'route': '/home/tienda-roja',
+      },
+      {'icon': Icons.local_offer, 'label': 'Promos', 'route': '/home/promos'},
+      {
+        'icon': Icons.person,
+        'label': 'Rey de\nCopas',
+        'route': '/home/user-info',
+      },
     ];
 
     return Padding(

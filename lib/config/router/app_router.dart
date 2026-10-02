@@ -1,6 +1,7 @@
 import 'package:cai_digital/features/groups/presentation/groups_screen.dart';
 import 'package:cai_digital/features/home/presentation/home_screen.dart';
 import 'package:cai_digital/features/login/presentation/login_screen.dart';
+import 'package:cai_digital/features/promos/presentation/promos_screen.dart';
 import 'package:cai_digital/features/qr/presentation/qr_screen.dart';
 import 'package:cai_digital/features/shop/presentation/shop_screen.dart';
 import 'package:cai_digital/features/social_cuote/presentation/social_cuota_screen.dart';
@@ -74,6 +75,13 @@ class AppRouter {
             name: 'userInfo',
             builder: (BuildContext context, GoRouterState state) {
               return const UserInfoScreen();
+            },
+          ),
+          GoRoute(
+            path: 'promos',
+            name: 'promos',
+            builder: (BuildContext context, GoRouterState state) {
+              return const PromosScreen();
             },
           ),
           GoRoute(

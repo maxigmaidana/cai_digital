@@ -105,7 +105,7 @@ class _UserInfoHeader extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               const Text(
-                'Ayelen Pérez',
+                'Joan Fernandez',
                 style: TextStyle(
                   color: kWhite,
                   fontSize: 18,
