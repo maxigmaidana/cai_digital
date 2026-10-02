@@ -1,4 +1,4 @@
-package com.example.cai_digital
+package com.cai_digital
 
 import io.flutter.embedding.android.FlutterActivity
 
